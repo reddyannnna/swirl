@@ -1,30 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anime World</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function searchAnime() {
+      const input = document.getElementById("search").value.toLowerCase();
+      document.querySelectorAll("main section").forEach(sec => {
+        sec.style.display = sec.innerText.toLowerCase().includes(input) ? "block" : "none";
+      });
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
 </head>
 <body>
-  <h1>Top Anime </h1>
-  <div class="anime">
-    <div>
-      <h2>Naruto</h2>
-      <img src="https://i.pinimg.com/originals/d0/5e/43/d05e43302c5cc6d412f540f1176690bc.gif" alt="Naruto">
-    </div>
-    <div>
-      <h2>Demon Slayer</h2>
-      <img src="https://media.tenor.com/0jFEPrDFvosAAAAM/demon-slayer-tanjiro.gif" alt="Demon Slayer">
-    </div>
-    <div>
-      <h2>MHA</h2>
-      <img src="https://i.pinimg.com/originals/e6/f7/10/e6f7108412d3f772f6473cb0f7aa5474.gif" alt="My Hero Academia">
-    </div>
+  <header>
+    <h1>Welcome to the Anime World!</h1>
+  </header>
+
+  <nav>
+    <a href="#naruto">Naruto</a>
+    <a href="#demon">Demon Slayer</a>
+    <a href="#mha">MHA</a>
+  </nav>
+
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search anime..." onkeyup="searchAnime()">
+    <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
   </div>
 
-  <a href="https://www.fandom.com/topics/anime">anime webpage</a>
-  <p>Email:vyaskrishiv919@gmail.com <a href=""></a></p>
-  <button onclick="alert('Hello Anime Fan!reach me at vyaskrishiv919@gmail.com')">Click Me</button>
+  <main>
+    <section id="naruto">
+      <h2>Naruto</h2>
+      <figure>
+        <img src="https://media.tenor.com/jbKZzuLmalUAAAAj/naruto-and-kurama-rasengan.gif" alt="Naruto and Jiraiya">
+        <figcaption>Naruto and his tailed beast Kurama – a bond beyond words.</figcaption>
+      </figure>
+      <p><strong>Genre:</strong> Action, Adventure</p>
+      <p><strong>Story:</strong> Naruto, a ninja with the Nine-Tailed Fox inside him, strives to be Hokage.</p>
+      <ul>
+        <li>Naruto Uzumaki</li>
+        <li>Jiraiya</li>
+        <li>Sasuke</li>
+        <li>Kurama</li>
+      </ul>
+      <p>Naruto is a Japanese manga series written and illustrated by Masashi Kishimoto. It tells the story of Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village. The story is told in two parts: the first is set in Naruto's pre-teen years (volumes 1–27), and the second in his teens (volumes 28–72). The series is based on two one-shot manga by Kishimoto: Karakuri (1995), which earned Kishimoto an honorable mention in Shueisha's monthly Hop Step Award the following year, and Naruto (1997).</p>
+    </section>
 
-  <footer>Anime webpage</footer>
+    <section id="demon">
+      <h2>Demon Slayer</h2>
+      <img src="https://media1.tenor.com/m/0jFEPrDFvosAAAAC/demon-slayer-tanjiro.gif" alt="Demon Slayer" />
+      <p><strong>Genre:</strong> Dark Fantasy</p>
+      <p><strong>Story:</strong> Tanjiro becomes a demon slayer to save his sister Nezuko and fight demons.</p>
+      <ul>
+        <li>Tanjiro</li>
+        <li>Nezuko</li>
+      </ul>
+      <p>Demon Slayer," also known as Kimetsu no Yaiba, is a popular Japanese manga and anime series. The story follows Tanjiro Kamado, a young boy who becomes a demon slayer after his family is slaughtered and his sister, Nezuko, is turned into a demon. Tanjiro's quest is to avenge his family and find a way to turn Nezuko back into a human. </p>
+    </section>
+
+    <section id="mha">
+      <h2>My Hero Academia</h2>
+      <img src="https://64.media.tumblr.com/11dddacc6ac1e7a8a959b07d5369229f/tumblr_pw3bs7bCuR1t1yvcko5_400.gifv" alt="MHA" />
+      <p><strong>Genre:</strong> Superhero</p>
+      <p><strong>Story:</strong> In a world where most people have superpowers (quirks), Izuku Midoriya dreams of becoming the #1 hero.</p>
+      <ul>
+        <li>Deku</li>
+        <li>All Might</li>
+        <li>Bakugo</li>
+      </ul>
+      <p>My Hero Academia (Japanese: 僕のヒーローアカデミア, Hepburn: Boku no Hīrō Akademia) is a Japanese manga series written and illustrated by Kōhei Horikoshi. It was serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump from July 2014 to August 2024, with its chapters collected in 42 tankōbon volumes. Set in a world where superpowers (called "Quirks") have become commonplace, the story follows Izuku Midoriya, a boy who was born without a Quirk but still dreams of becoming a superhero himself. He is scouted by the world's greatest hero, All Might, who bestows his Quirk to Midoriya after recognizing his potential, and helps to enroll him in a prestigious high school for superheroes in training.</p>
+        </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Anime Fanpage | <a href="https://www.fandom.com/topics/anime">Contact us</a></p>
+  </footer>
 </body>
 </html>
