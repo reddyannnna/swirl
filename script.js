@@ -5,7 +5,7 @@ function showPage(page) {
   window.scrollTo({top:0, behavior:'smooth'});
 }
 
-// Music player logic
+
 const player = document.getElementById('lofi-player');
 const btn = document.getElementById('play-btn');
 const vol = document.getElementById('vol-control');
@@ -17,6 +17,6 @@ btn.addEventListener('click', () => {
 
 vol.addEventListener('input', () => player.volume = vol.value);
 
-// Start paused at half‑volume
+
 player.volume = 0.5;
 
